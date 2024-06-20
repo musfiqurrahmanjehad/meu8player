@@ -4,39 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>XDXtv PLAYER</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+  <header class="header text-center">
     <div class="container">
       <h1>XDXtv Player</h1>
     </div>
   </header>
 
   <main>
-    <div class="container">
-
+    <div class="container my-5">
       <div class="converter-container">
-        <label for="hlsLink">Enter HLS Link:</label>
-        <input type="text" id="hlsLink" name="hlsLink" placeholder="Your HLS URL here .m3u8 .mpd .mp4 .mkv .webm">
-        <select id="playerSelect">
-          <option value="cleper">Cleper Player</option>
-          <option value="jw">JW Player</option>
-          <option value="videojs">Video.js Player</option>
-          <option value="flowplayer">flowplayer</option>
-          <option value="plyrPlayer">plyr Player</option>
-        </select>
-        <button onclick="loadSimpleHLS()">Load Sample HLS</button>
+        <div class="text-center mb-4">
+          <h2>Stream Your Favorite Videos</h2>
+          <p class="text-muted">Enter your HLS link and select a player to get started.</p>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="hlsLink">Enter HLS Link:</label>
+            <input type="text" class="form-control" id="hlsLink" name="hlsLink" placeholder="Your HLS URL here .m3u8 .mpd .mp4 .mkv .webm">
+          </div>
+          <div class="form-group">
+            <label for="playerSelect">Select Player:</label>
+            <select class="form-control" id="playerSelect">
+              <option value="cleper">Cleper Player</option>
+              <option value="jw">JW Player</option>
+              <option value="videojs">Video.js Player</option>
+              <option value="flowplayer">flowplayer</option>
+              <option value="plyrPlayer">plyr Player</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-warning fw-bolder btn-block" onclick="loadSimpleHLS()">Load Sample HLS</button>
+        </form>
       </div>
     </div>
   </main>
 
   <script src="scripts.js"></script>
-  <div class="container1">
+  <footer class="footer text-center">
     <div class="container">
-      <p>&copy; 2024 XDXtv Player. All rights reserved.</p>
-      <p>Author: Duckist - Distributed By: <a href="https://duckist.pp.ua" target="_blank" title="Duckist">Duckist</a></p>
+      <p>&copy; 2024 <a href="https://xdx.buzz" target="_blank" class="text-decoration-none text-primary fw-bolder" title="XDXtv">XDXtv Player</a>. All rights reserved.</p>
+      <p>Author: DUCKIST - Distributed By: <a href="https://duckist.pp.ua" target="_blank" class="text-decoration-none fw-bolder text-primary" title="DUCKIST">DUCKIST</a></p>
     </div>
-  </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
