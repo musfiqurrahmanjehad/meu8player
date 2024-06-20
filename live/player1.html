@@ -115,7 +115,7 @@
     }
 
     // Define the main domain
-    var mainDomain = 'https://noobromon.github.io/';
+    var mainDomain = 'https://player.xdx.buzz/';
 
     function isURLAllowed(url) {
         return url.startsWith(mainDomain);
@@ -124,7 +124,7 @@
     if (!isURLAllowed(window.location.href)) {
         // Redirect to the main domain after 10 seconds
         setTimeout(function () {
-            window.location.href = 'https://noobromon.github.io/m3u8-to-iframe/';
+            window.location.href = 'https://player.xdx.buzz/';
         }, 10); // 10 seconds delay
     }
 
