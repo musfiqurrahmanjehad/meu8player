@@ -27,7 +27,6 @@ function generatePreview() {
     default:
       break;
   }
-
 }
 
 // Function to load sample HLS link from JSON file
@@ -46,6 +45,10 @@ async function loadSimpleHLS() {
     generatePreview(); // Update the preview after loading the HLS URL
   } catch (error) {
     console.error('Error fetching HLS URL:', error);
-    alert('Failed to load HLS URL. Please try again later.');
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Failed to load HLS URL. Please try again later.'
+    });
   }
 }
